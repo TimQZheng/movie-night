@@ -2,6 +2,7 @@
   "name": "movie-night",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://timqzheng.github.io/movie-night",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
