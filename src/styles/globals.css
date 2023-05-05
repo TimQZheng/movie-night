@@ -1,3 +1,11 @@
-.nextui-c-egxOLa{
-    max-width: unset;
+main{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    margin: auto;
+    text-align:center;
+}
+
+li{
+    text-align:left;
 }

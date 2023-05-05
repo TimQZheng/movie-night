@@ -6,7 +6,6 @@ import * as React from "react";
 function LightDarkToggleSwitch() {
     const {setTheme} = useNextTheme();
     // @ts-ignore
-    const {isLight, type} = useTheme();
     return (
         <Switch
             iconOn={<LightModeTwoTone/>}
