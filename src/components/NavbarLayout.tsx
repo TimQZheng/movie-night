@@ -12,7 +12,7 @@ export const NavbarLayout = ({children, highlight, avatarSrc}: LayoutProps) => (
         <Navbar isBordered={true} maxWidth="fluid">
             <Navbar.Content variant="underline">
                 <Navbar.Brand>
-                    <Link href="/" style={{color: "inherit"}}>
+                    <Link href="./" style={{color: "inherit"}}>
                         <h1>Movie Night</h1>
                     </Link>
                 </Navbar.Brand>
