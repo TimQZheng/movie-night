@@ -1,4 +1,4 @@
-import {Avatar, Navbar, Spacer, Link} from "@nextui-org/react";
+import {Avatar, Link, Navbar, Spacer, Text} from "@nextui-org/react";
 import LightDarkToggleSwitch from "@/components/LightDarkToggleSwitch";
 import React, {ReactNode} from "react";
 
@@ -12,19 +12,31 @@ export const NavbarLayout = ({children, highlight, avatarSrc}: LayoutProps) => (
         <Navbar isBordered={true} maxWidth="fluid">
             <Navbar.Content variant="underline">
                 <Navbar.Brand>
+                    <Navbar.Toggle showIn="xs"/>
                     <Link href="./" style={{color: "inherit"}}>
-                        <h1>Movie Night</h1>
+                        <Text>
+                            <h1>Movie Night</h1>
+                        </Text>
                     </Link>
                 </Navbar.Brand>
-                <Spacer/>
-                <Navbar.Link href="nominate" isActive={highlight==="Nominate"}>Nominate</Navbar.Link>
-                <Navbar.Link href="vote" isActive={highlight==="Vote"}>Vote</Navbar.Link>
-                <Navbar.Link href="admin" isActive={highlight==="Admin"}>Admin</Navbar.Link>
+                <Navbar.Content hideIn="xs">
+                    <Navbar.Link href="nominate" isActive={highlight === "Nominate"}>Nominate</Navbar.Link>
+                    <Navbar.Link href="vote" isActive={highlight === "Vote"}>Vote</Navbar.Link>
+                    <Navbar.Link href="admin" isActive={highlight === "Admin"}>Admin</Navbar.Link>
+                </Navbar.Content>
             </Navbar.Content>
             <Navbar.Content>
-                <LightDarkToggleSwitch/>
+                <Navbar.Content hideIn="xs">
+                    <LightDarkToggleSwitch/>
+                </Navbar.Content>
                 <Avatar src={avatarSrc}/>
             </Navbar.Content>
+            <Navbar.Collapse>
+                <Navbar.CollapseItem><Link href="nominate">Nominate</Link></Navbar.CollapseItem>
+                <Navbar.CollapseItem><Link href="vote">Vote</Link></Navbar.CollapseItem>
+                <Navbar.CollapseItem><Link href="admin">Admin</Link></Navbar.CollapseItem>
+                <Navbar.CollapseItem><LightDarkToggleSwitch/></Navbar.CollapseItem>
+            </Navbar.Collapse>
         </Navbar>
         <main>{children}</main>
     </div>
