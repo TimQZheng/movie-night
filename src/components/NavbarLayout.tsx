@@ -14,8 +14,8 @@ export const NavbarLayout = ({children, highlight, avatarSrc}: LayoutProps) => (
                 <Navbar.Brand>
                     <Navbar.Toggle showIn="xs"/>
                     <Link href="./" style={{color: "inherit"}}>
-                        <Text>
-                            <h1>Movie Night</h1>
+                        <Text h1>
+                            Movie Night
                         </Text>
                     </Link>
                 </Navbar.Brand>
